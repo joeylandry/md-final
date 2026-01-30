@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     background:
     linear-gradient(rgba(255, 254, 240, 0.9), rgba(225, 245, 254, 0.75)),
-    url("../images/main_background.png");
+    url("../images/main_background.jpeg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
