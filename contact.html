@@ -39,6 +39,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <img src="images/about_me.JPG" alt="Contact Marianne">
+                    <p class="contact-direct">To contact Marianne directly email:</p>
                     <p class="contact-email">
                         <a href="mailto:mariannetalks@gmail.com">mariannetalks@gmail.com</a>
                     </p>
@@ -46,7 +47,7 @@
                 <div class="contact-form about-text">
                     <h2>Contact</h2>
                     <p class="contact-blurb">To book Marianne, please fill out the details below.</p>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/mzdvklqv" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -67,6 +68,8 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
+                        <input type="hidden" name="_subject" value="New contact form submission">
+                        <input type="hidden" name="_cc" id="ccField" value="">
                         <button type="submit" class="cta-button">Send Message</button>
                     </form>
                 </div>
