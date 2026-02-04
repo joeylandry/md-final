@@ -2,11 +2,11 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #e0f3ff;
-    --secondary-color: #5fc2ff;
-    --accent-color: #8fc6ff;
+    --primary-color: #FFFEF0;
+    --secondary-color: #B3E5FC;
+    --accent-color: #E1F5FE;
     --text-color: #333;
-    --light-bg: #a8dfff;
+    --light-bg: #E1F5FE;
     --white: #ffffff;
     --shadow: 0 1px 6px rgba(0,0,0,0.06);
     --transition: all 0.3s ease;
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     background:
-    linear-gradient(rgba(249, 252, 255, 0.6), rgba(159, 207, 255, 0.8)),
+    linear-gradient(rgba(255, 254, 240, 0.65), rgba(179, 229, 252, 0.78)),
     url("../images/main_background.jpeg");
 background-size: cover;
 background-position: center;
@@ -210,7 +210,7 @@ background-repeat: no-repeat;
 .about {
     padding: 80px 0;
     background: 
-        linear-gradient(rgba(249, 252, 255, 0.6), rgba(159, 207, 255, 0.5)), 
+        linear-gradient(rgba(255, 254, 240, 0.6), rgba(179, 229, 252, 0.55)), 
         url("../images/gray_background1.jpeg");
     background-size: cover;
     background-position: center;
@@ -283,16 +283,17 @@ background-repeat: no-repeat;
     position: relative;
     max-width: 360px;
     margin: 0 auto;
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 .about-gallery img {
-    position: absolute;
-    inset: 0;
+    grid-area: 1 / 1;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: var(--shadow);
     display: block;
@@ -301,7 +302,7 @@ background-repeat: no-repeat;
 
 .topics {
     padding: 70px 0;
-    background: linear-gradient(135deg, #f9fcff, #a9d4ff);
+    background: linear-gradient(135deg, #fffef0, #b3e5fc);
     text-align: center;
 }
 
@@ -335,7 +336,7 @@ background-repeat: no-repeat;
 
 .quotes {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f9fcff, #a9d4ff);
+    background: linear-gradient(135deg, #fffef0, #b3e5fc);
     text-align: center;
 }
 
@@ -381,7 +382,7 @@ background-repeat: no-repeat;
     text-align: center;
     padding: 2rem;
     border-radius: 12px;
-    background: linear-gradient(135deg, #f9fcff, #a9d4ff);
+    background: linear-gradient(135deg, #fffef0, #b3e5fc);
 }
 
 .section-quotes h3 {
@@ -390,13 +391,13 @@ background-repeat: no-repeat;
 }
 
 .section-quotes.alt {
-    background: linear-gradient(315deg, #f9fcff, #a9d4ff);
+    background: linear-gradient(315deg, #fffef0, #b3e5fc);
 }
 
 .beloved-intro {
     padding: 70px 0 40px;
     background:
-        linear-gradient(rgba(249, 252, 255, 0.6), rgba(159, 207, 255, 0.5)),
+        linear-gradient(rgba(255, 254, 240, 0.6), rgba(179, 229, 252, 0.55)),
         url("../images/gray_background1.jpeg");
     background-size: cover;
     background-position: center;
@@ -458,23 +459,30 @@ background-repeat: no-repeat;
 
 /* Page Headers */
 .page-header {
-    background: linear-gradient(135deg, #f9fcff, #8fbefb);
+    background: linear-gradient(135deg, #fffef0, #b3e5fc);
     padding: 120px 0 60px;
     margin-top: 70px;
 }
 
 .beloved-header {
     background:
-        linear-gradient(rgba(249, 252, 255, 0.6), rgba(140, 190, 255, 0.75)),
-        url("../images/beloved_background2.JPG");
-    background-size: 100%;
-    background-position: center 42%;
+        linear-gradient(rgba(255, 254, 240, 0.62), rgba(179, 229, 252, 0.75)),
+        url("../images/beloved_background3.JPG");
+    background-size: cover;
+    /* nudge image left using px for stronger effect */
+    background-position: -12% 40%;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .beloved-header {
+        background-position: 35% 42%;
+    }
 }
 
 .videos-header {
     background:
-        linear-gradient(rgba(249, 252, 255, 0.6), rgba(140, 190, 255, 0.75)),
+        linear-gradient(rgba(255, 254, 240, 0.62), rgba(179, 229, 252, 0.75)),
         url("../images/videos_background.jpg");
     background-size: cover;
     background-position: center 43%;
@@ -483,7 +491,7 @@ background-repeat: no-repeat;
 
 .contact-header {
     background:
-        linear-gradient(rgba(249, 252, 255, 0.52), rgba(140, 190, 255, 0.58)),
+        linear-gradient(rgba(255, 254, 240, 0.52), rgba(179, 229, 252, 0.6)),
         url("../images/contact_background.jpeg");
     background-size: cover;
     background-position: center 35%;
@@ -523,7 +531,7 @@ background-repeat: no-repeat;
     gap: 4rem;
     padding: 80px 0;
     background: 
-        linear-gradient(rgba(249, 252, 255, 0.4), rgba(140, 190, 255, 0.5)), 
+        linear-gradient(rgba(255, 254, 240, 0.42), rgba(179, 229, 252, 0.52)), 
         url("../images/contact_background.jpeg");
     background-size: cover;
     background-position: center 50%;
@@ -619,7 +627,7 @@ background-repeat: no-repeat;
 .videos-section {
     padding: 80px 0;
     background:
-        linear-gradient(rgba(249, 252, 255, 0.4), rgba(140, 190, 255, 0.5)),
+        linear-gradient(rgba(255, 254, 240, 0.42), rgba(179, 229, 252, 0.52)),
         url("../images/videos_background.jpeg");
     background-size: cover;
     background-position: center 70%;
@@ -706,11 +714,6 @@ background-repeat: no-repeat;
 
 .watch-btn {
     display: inline-block;
-    background: var(--secondary-color);
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 5px;
     margin-top: 1rem;
 }
 
@@ -718,7 +721,7 @@ background-repeat: no-repeat;
 .events-section {
     padding: 80px 0;
     background: 
-        linear-gradient(rgba(249, 252, 255, 0.4), rgba(159, 207, 255, 0.45)), 
+        linear-gradient(rgba(255, 254, 240, 0.42), rgba(179, 229, 252, 0.48)), 
         url("../images/gray_background1.jpeg");
     background-size: cover;
     background-position: center;
@@ -882,7 +885,7 @@ background-repeat: no-repeat;
 
 .contact-section {
     background:
-        linear-gradient(rgba(249, 252, 255, 0.4), rgba(159, 207, 255, 0.45)),
+        linear-gradient(rgba(255, 254, 240, 0.42), rgba(179, 229, 252, 0.48)),
         url("../images/gray_background1.jpeg");
     background-size: cover;
     background-position: center;
