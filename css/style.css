@@ -355,6 +355,13 @@ background-repeat: no-repeat;
     margin-right: auto;
 }
 
+/* Give desktop quotes a bit more breathing room so lines don't orphan words */
+@media (min-width: 1024px) {
+    .quotes-grid {
+        max-width: 1000px;
+    }
+}
+
 .quote-card {
     background: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
