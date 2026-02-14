@@ -71,6 +71,7 @@
                         <input type="hidden" name="_subject" value="New contact form submission">
                         <input type="hidden" name="_cc" id="ccField" value="">
                         <button type="submit" class="cta-button">Send Message</button>
+                        <input type="hidden" name="_next" value="contact.html?sent=1">
                     </form>
                 </div>
             </div>
@@ -89,5 +90,13 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sent") === "1") {
+    alert("Thank you for your message! Marianne will get back to you soon.");
+    // remove the query so it doesn't alert again on refresh
+    window.history.replaceState({}, document.title, "contact.html");
+  }
+</script>
 </body>
 </html>
